@@ -37,7 +37,10 @@ RUN mvn -Pnative native:compile -DskipTests
  
 # The deployment Image
 #FROM docker.io/oraclelinux:9-slim  #200MB
-FROM cgr.dev/chainguard/wolfi-base:latest   #100MB
+#FROM cgr.dev/chainguard/wolfi-base:latest   #104MB
+
+FROM alpine:latest #99M
+RUN apk add gcompat
  
 EXPOSE 8080
  
