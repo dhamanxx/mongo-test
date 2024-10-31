@@ -1,3 +1,23 @@
+## docker builds
+```
+docker build -t mongo-test:latest -f ./Dockerfile .
+docker build -t mongo-test:latest -f ./Dockerfile-native .
+```
+
+## docker run
+
+```
+docker run -it -p 8080:8080 mongo-test:latest
+```
+
+## docker compose
+
+```
+cd docker
+docker-compose -f compose.yaml up -d --build
+docker-compose -f compose.yaml down
+```
+
 ## Micronaut 4.6.3 Documentation
 
 - [User Guide](https://docs.micronaut.io/4.6.3/guide/index.html)
